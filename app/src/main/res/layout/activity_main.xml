@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_opd1"
+        android:text="運算元(一)："
+        android:textSize="20sp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/et_input_opd1"
+        android:text=""
+        android:textSize="20sp"
+        android:hint="請輸入運算數值1"
+        android:textColorHint="#f00"
+        android:inputType="numberDecimal|numberSigned"
+        app:layout_constraintBaseline_toBaselineOf="@id/tv_opd1"
+        app:layout_constraintStart_toEndOf="@id/tv_opd1"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_opd2"
+        android:text="運算元(二)："
+        android:textSize="20sp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="@id/tv_opd1"
+        app:layout_constraintTop_toBottomOf="@id/tv_opd1" />
+
+    <EditText
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/et_input_opd2"
+        android:text=""
+        android:textSize="20sp"
+        android:hint="請輸入運算數值2"
+        android:textColorHint="#f00"
+        android:inputType="numberDecimal|numberSigned"
+        app:layout_constraintBaseline_toBaselineOf="@id/tv_opd2"
+        app:layout_constraintStart_toEndOf="@id/tv_opd2"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_choose_op"
+        android:text="選擇運算子"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_opd2"
+        app:layout_constraintStart_toStartOf="@id/tv_opd2"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_output"
+        android:text="運算結果顯示："
+        android:textSize="20sp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/btn_choose_op"
+        app:layout_constraintStart_toStartOf="@id/btn_choose_op"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

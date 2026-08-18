@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rg_operators"
+        android:orientation="horizontal"
+        android:layout_margin="20dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rb_add"
+            android:text="+"
+            android:textSize="40sp"
+            android:layout_weight="1"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rb_substract"
+            android:text="-"
+            android:textSize="40sp"
+            android:layout_weight="1"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rb_multiply"
+            android:text="*"
+            android:textSize="40sp"
+            android:layout_weight="1"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rb_divide"
+            android:text="/"
+            android:textSize="40sp"
+            android:layout_weight="1"/>
+
+    </RadioGroup>
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/cb_divide"
+        android:text="整數除法"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/rg_operators"
+        app:layout_constraintStart_toStartOf="@id/rg_operators"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_calculate"
+        android:text="計算"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/cb_divide"
+        app:layout_constraintStart_toStartOf="@id/cb_divide"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_msg"
+        android:text=""
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/btn_calculate"
+        app:layout_constraintStart_toStartOf="@id/btn_calculate"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
